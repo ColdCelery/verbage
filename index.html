@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="UFT-8">
+        <meta name="vieport" content="width=device-width, initial-scale=1.0">
+        <title>Audit Cheat Sheet</title>
+        <link rel='stylesheet' href='app.css'>        
+    </head>
+    <body>
+        <h1>Audit cheat sheet</h1>
+        <form id='myform' autocomplete="off">
+            
+            <div>
+                <label for="errorType">Error type</label>
+                <select id="errorType">
+                <option disabled selected value> -- select an option -- </option>
+                <option>Not Stow</option>
+                <option>Stow</option>
+                <option>Restow</option>
+                </select>         
+                <label for='userId'>userid</label>
+                <input type="text" id="userId" placeholder='userid'>            
+                <label for='location'>Physical Location</label>
+                <input type='text' id="binLocation" placeholder='bin'>
+            </div>
+            <div>
+                <label for='vbin'>Virtual Location</label><input type='text' id='vbin'>              
+                <label for='caseCSX'>case</label>
+                <input type='text' id="caseCSX" placeholder='case'>
+                <label for='addInfo'>Aditional information</label>
+                <input type='text' id="addInfo" placeholder='what you did'>
+            </div>
+            <div class='obin'>
+                <h2>stowed other bin, stowed adjacent bin only</h2>
+  <!--      <div class='taobin'>
+                <label for='aoBin'>Other</label><input type='radio' name='aoBin' value='other bin'><label>adjacent bin</label><input type='radio' name='aoBin' value='adjacent bin'></div>-->     
+                <label for='oBin'>orignal physical location</label><input type='text' id='oBin'>
+                <label for='oVBin'>orignal virtual location</label><input type='text' id='oVBin'>
+            </div>           
+
+        </form>
+        <label>Stowed not scanned</label> 
+        <p class='copytext' id='copytext'><span class='etype'></span>, <span class="userId"></span>, <span class="bin"></span>, <span class="caseCSX"></span>, <span>Case(s) <span class='caseCSX'>XXXXXXX</span> were stowed in <span class='bin'>XXXXXX</span> but not scanned, scanned case(s) to <span class='bin'>XXXXXX</span>.</span> </p>
+        <label>Stowed not scanned, received</label> 
+        <p class='copytext' id='copytext1'><span class='etype'></span>, <span class="userId"></span>, <span class="bin"></span>, <span class="caseCSX"></span>, <span>Case(s) <span class='caseCSX'>XXXXXXX</span> were stowed in <span class='bin'>XXXXXX</span> but not scanned, received and scanned case(s) to <span class='bin'>XXXXXX</span>.</span> </p>
+        <label>Stowed Other bin -- moved case</label>
+        <p class='copytext' id='copytext2'><span class='etype'></span>, <span class="userId"></span>, <span class="bin"></span>, <span class="caseCSX"></span>, <span>Case(s)<span class="caseCSX">XXXXXX</span> were stowed in<span class='oBin'>XXXXXX</span> but scanned in <span class='aoBin'></span> <span class='oVBin'>XXXXXX</span></span>. Moved case(s) to <span class='bin'>XXXXXX</span></p>
+        <label>Stowed Other bin -- scanned case</label>
+        <p class='copytext' id='copytext3'><span class='etype'></span>, <span class="userId"></span>, <span class="bin"></span>, <span class="caseCSX"></span>, <span>Case(s)<span class="caseCSX">XXXXXX</span> were stowed in<span class='oBin'>XXXXXX</span> but scanned in <span class='oVBin'>XXXXXX</span></span>. Scanned case(s) to <span class='bin'>XXXXXX</span>.</p>
+
+        <label>case missing</label>
+        <p class='copytext' id='copytext4'><span class='etype'></span>, <span class="userId"></span>, <span class="bin"></span>, <span class="caseCSX"></span>,<span> Case <span class='caseCSX'>XXXXXX</span> was scanned into <span class='oVBin'>XXXXXX</span> but not stowed. Searched 9 surrounding bins, case was not found, scanned to emptypacs. </span></p>
+        <label>custom</label>
+        <p class='copytext' id='copytext5'><span class='etype'></span>, <span class="userId"></span>, <span class="bin"></span>, <span class="caseCSX"></span>, <span class="addInfo"></span> </p>
+        <button onclick='reset()'>reset form</button>        
+        <script src='app.js'></script>       
+    </body>
+
+
+</html>

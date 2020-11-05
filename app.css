@@ -1,0 +1,56 @@
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 60px;
+}
+#bear-photo {
+  width: 250px;
+}
+.special {
+  color: teal;
+  font-size: 30px;
+}
+label,
+input {
+  display: block;
+}
+.copytext {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  border-style: dashed;
+  border-width: 3px;
+  border-radius: 15px;
+  padding: 10px;
+}
+.copytext:hover {
+  cursor: pointer;
+}
+form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+div {
+  display: inline-block;
+}
+span {
+  margin-left: 3px;
+}
+button {
+  font-style: bold;
+  margin-top: 5%;
+  margin-left: 50%;
+  margin-right: 50%;
+  padding: 12px;
+}
+html {
+  margin-left: 5%;
+}
+.obin {
+  border: 1px black solid;
+  padding: 3px;
+}
+.taobin {
+  display: flex;
+}
