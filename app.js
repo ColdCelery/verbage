@@ -25,12 +25,6 @@ binLocation.oninput = () => {
     items[i].innerHTML = document.getElementById("binLocation").value;
   }
 };
-vbin.oninput = () => {
-  let items = document.getElementsByClassName("vbin");
-  for (let i = 0; i < items.length; i++) {
-    items[i].innerHTML = document.getElementById("vbin").value;
-  }
-};
 caseCSX.oninput = () => {
   let items = document.getElementsByClassName("caseCSX");
   for (let i = 0; i < items.length; i++) {
