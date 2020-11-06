@@ -18,7 +18,7 @@ input {
   display: flex;
   margin-top: 10px;
   justify-content: center;
-  border-style: dashed;
+  border-style: dotted;
   border-width: 3px;
   border-radius: 15px;
   padding: 10px;

@@ -25,7 +25,6 @@ binLocation.oninput = () => {
     items[i].innerHTML = document.getElementById("binLocation").value;
   }
 };
-
 caseCSX.oninput = () => {
   let items = document.getElementsByClassName("caseCSX");
   for (let i = 0; i < items.length; i++) {
@@ -50,12 +49,13 @@ oVBin.oninput = () => {
     items[i].innerHTML = document.getElementById("oVBin").value;
   }
 };
-oVBin.oninput = () => {
-  let items = document.getElementsByClassName("aoBin");
+stowtype.oninput = () => {
+  let items = document.getElementsByClassName("stowtype");
   for (let i = 0; i < items.length; i++) {
-    items[i].innerHTML = document.getElementById("aoBin").value;
+    items[i].innerHTML = document.getElementById("stowtype").value;
   }
 };
+
 const span = document.querySelector("#copytext");
 const span1 = document.querySelector("#copytext1");
 const span2 = document.querySelector("#copytext2");
@@ -127,10 +127,4 @@ span5.addEventListener("copy", function (event) {
 });
 function reset() {
   window.location.reload();
-}
-function setDisplay(className, displayValue) {
-  var items = document.getElementsByClassName(className);
-  for (var i = 0; i < items.length; i++) {
-    items[i].style.display = displayValue;
-  }
 }
